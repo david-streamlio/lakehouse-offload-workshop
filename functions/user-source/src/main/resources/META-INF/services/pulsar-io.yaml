@@ -1,0 +1,3 @@
+name: UserGenerator
+description: Generates Random User Objects
+sourceClass: io.streamnative.training.functions.UserSource

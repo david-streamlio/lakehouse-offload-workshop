@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "name": "User",
+  "namespace": "io.streamnative.functions.data",
+  "fields": [
+    {
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "name": "name",
+      "type": ["null", "string"],
+      "default": null
+    }
+  ]
+}
+

@@ -1,0 +1,30 @@
+{
+  "tenant":"public",
+  "namespace":"default",
+  "name":"iceberg_sink",
+  "parallelism":2,
+  "inputs": [
+    "persistent://public/default/test-iceberg-pulsar"
+  ],
+  "inputSpecs": {
+      "\"persistent://public/default/test-iceberg-pulsar\"": {
+        "schemaType": "AVRO"
+      }
+  },
+  "processingGuarantees":"EFFECTIVELY_ONCE",
+  "configs":{
+    "type":"iceberg",
+    "maxCommitInterval":120,
+    "maxRecordsPerCommit":10000000,
+    "catalogName":"test_v1",
+    "tableNamespace":"iceberg_sink_test",
+    "tableName":"ice_sink_person",
+    "hadoop.fs.s3a.aws.credentials.provider": "com.amazonaws.auth.DefaultAWSCredentialsProviderChain",
+    "catalogProperties":{
+      "warehouse":"file:///tmp/warehouse",
+      "catalog-impl":"hadoopCatalog",
+      "uri": "thrift://metastore-standalone:9083"
+    }
+  },
+  "runtimeFlags": "-DAWS_ACCESS_KEY_ID=admin -DAWS_SECRET_ACCESS_KEY=password"
+}

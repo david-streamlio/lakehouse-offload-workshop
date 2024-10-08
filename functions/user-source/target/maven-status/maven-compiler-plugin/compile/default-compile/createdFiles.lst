@@ -1,0 +1,4 @@
+io/streamnative/functions/data/User.class
+io/streamnative/training/functions/UserSource.class
+io/streamnative/training/functions/UserRecord.class
+io/streamnative/functions/data/User$Builder.class

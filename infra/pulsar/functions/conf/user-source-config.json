@@ -1,0 +1,8 @@
+{
+  "tenant": "public",
+  "namespace": "default",
+  "name": "user_source",
+  "classname": "io.streamnative.training.functions.UserSource",
+  "topicName": "persistent://public/default/test-iceberg-pulsar",
+  "schemaType": "AVRO"
+}
